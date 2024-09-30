@@ -1,0 +1,19 @@
+This is not going to be handled professionally, I'm a student who's stuck at home and wants to make stuff.
+
+Before i can even build this project myself, i need to mark what parts i would need to be able to assemble anything electronic with this system.
+As such, i will list off a very crude and simple bill of materials here.
+
+ELECTRONICS:
+A 3D Printer Motherboard running with STM32 processor (and preferably a USB Type B, Mini B, Micro B, or Type C connector)
+7 SANWA OBSF-24 arcade pushbutton switches
+2 NEMA-17 Stepper Motors, Size doesn't really matter other then for your build size. I'm using the ones Creality supplies for the Z axis leadscrew(s)
+2 Stepper Drivers, preferably NOT TMC. (if your motherboard does not come with stepper drivers built in)
+7 JST XH 2 pin connectors, for plugging loose wires into the MCU
+2 JST XH 4 pin connectors, for plugging Stepper Motors into the MCU, (Your motors may come with them attached, or you may have to go to the weird 6 pin standard that some motors use, i don't recall)
+24AWG wire, preferably stranded. have both wire in Red and Black for "Sensor" and "GND" to avoid confusion and crimping connectors backwards.
+NOTE: Many printer boards use 3 pin endstop ports, if we look at a connector with the lock tab north, the left pin is Signal, the Middle is GND, and the right is 5V. Pay attention to this, I don't want you to smoke your stuff.
+
+CHASSIS:
+The MCU identifies when a switch is opened or closed by determining if the sensor pin you configured it to use is in contact with GND. 
+Therefore, whatever you mount your motherboard to should be metal, with (likely M3) standoffs, so that everything is connected to the same ground.
+Beyond that, you really just need Wood, Acrylic, 3D Printer filament of your choosing, sheet metal if you can get it.
